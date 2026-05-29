@@ -6,7 +6,7 @@ describe("move-zeroes", () => {
     { nums: [0, 1, 0, 3, 12], want: [1, 3, 12, 0, 0] },
     { nums: [0], want: [0] },
   ];
-  it.skip.each(cases)("moveZeroes(%j)", ({ nums, want }) => {
+  it.each(cases)("moveZeroes(%j)", ({ nums, want }) => {
     moveZeroes(nums);
     expect(nums).toEqual(want);
   });

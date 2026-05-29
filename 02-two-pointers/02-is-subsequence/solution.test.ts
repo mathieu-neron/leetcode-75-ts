@@ -6,7 +6,7 @@ describe("is-subsequence", () => {
     { args: ["abc", "ahbgdc"] as const, want: true },
     { args: ["axc", "ahbgdc"] as const, want: false },
   ];
-  it.skip.each(cases)("isSubsequence(%j)", ({ args, want }) => {
+  it.each(cases)("isSubsequence(%j)", ({ args, want }) => {
     expect(isSubsequence(...args)).toEqual(want);
   });
 });
