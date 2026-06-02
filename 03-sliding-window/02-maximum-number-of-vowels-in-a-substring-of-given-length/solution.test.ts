@@ -6,7 +6,7 @@ describe("maximum-number-of-vowels-in-a-substring-of-given-length", () => {
     { args: ["abciiidef", 3] as const, want: 3 },
     { args: ["aeiou", 2] as const, want: 2 },
   ];
-  it.skip.each(cases)("maxVowels(%j)", ({ args, want }) => {
+  it.each(cases)("maxVowels(%j)", ({ args, want }) => {
     expect(maxVowels(...args)).toEqual(want);
   });
 });

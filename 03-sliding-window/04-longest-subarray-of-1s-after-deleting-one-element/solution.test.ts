@@ -7,7 +7,7 @@ describe("longest-subarray-of-1s-after-deleting-one-element", () => {
     { args: [[0, 1, 1, 1, 0, 1, 1, 0, 1]] as const, want: 5 },
     { args: [[1, 1, 1]] as const, want: 2 },
   ];
-  it.skip.each(cases)("longestSubarray(%j)", ({ args, want }) => {
+  it.each(cases)("longestSubarray(%j)", ({ args, want }) => {
     expect(longestSubarray(...args)).toEqual(want);
   });
 });
