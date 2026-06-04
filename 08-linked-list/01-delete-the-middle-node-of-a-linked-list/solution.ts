@@ -10,7 +10,18 @@ export class ListNode {
   }
 }
 export function deleteMiddle(head: ListNode | null): ListNode | null {
-  // TODO
-  return null;
+  if (!head) return null;
+  if (!head.next) return null;
+  let slow: ListNode | null = head;
+  let fast: ListNode | null = head.next.next;
+
+  while (fast && fast.next) {
+    slow = slow?.next ?? null;
+    fast = fast.next.next;
+  }
+
+  if (slow) slow.next = slow?.next?.next ?? null;
+
+  return head;
 }
 

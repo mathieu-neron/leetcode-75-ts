@@ -6,7 +6,7 @@ describe("removing-stars-from-a-string", () => {
     { args: ["leet**cod*e"] as const, want: "lecoe" },
     { args: ["erase*****"] as const, want: "" },
   ];
-  it.skip.each(cases)("removeStars(%j)", ({ args, want }) => {
+  it.each(cases)("removeStars(%j)", ({ args, want }) => {
     expect(removeStars(...args)).toEqual(want);
   });
 });

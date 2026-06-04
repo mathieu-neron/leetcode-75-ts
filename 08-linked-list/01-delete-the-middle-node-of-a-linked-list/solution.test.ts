@@ -22,7 +22,7 @@ describe("delete-the-middle-node-of-a-linked-list", () => {
     { input: [1, 2, 3, 4], want: [1, 2, 4] },
     { input: [2, 1], want: [2] },
   ];
-  it.skip.each(cases)("deleteMiddle(%j)", ({ input, want }) => {
+  it.each(cases)("deleteMiddle(%j)", ({ input, want }) => {
     expect(listToArr(deleteMiddle(buildList(input)))).toEqual(want);
   });
 });

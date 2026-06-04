@@ -6,7 +6,7 @@ describe("find-the-highest-altitude", () => {
     { args: [[-5, 1, 5, 0, -7]] as const, want: 1 },
     { args: [[-4, -3, -2, -1, 4, 3, 2]] as const, want: 0 },
   ];
-  it.skip.each(cases)("largestAltitude(%j)", ({ args, want }) => {
+  it.each(cases)("largestAltitude(%j)", ({ args, want }) => {
     expect(largestAltitude(...args)).toEqual(want);
   });
 });

@@ -27,7 +27,7 @@ describe("maximum-depth-of-binary-tree", () => {
     { tree: [1, null, 2], want: 2 },
     { tree: [], want: 0 },
   ];
-  it.skip.each(cases)("maxDepth(%j)", ({ tree, want }) => {
+  it.each(cases)("maxDepth(%j)", ({ tree, want }) => {
     expect(maxDepth(buildTree(tree))).toEqual(want);
   });
 });
