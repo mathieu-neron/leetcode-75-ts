@@ -12,7 +12,9 @@ export class TreeNode {
   }
 }
 export function searchBST(root: TreeNode | null, val: number): TreeNode | null {
-  // TODO
-  return null;
+  if (!root || root.val === val) return root;
+
+  if (root.val > val) return searchBST(root.left, val);
+  return searchBST(root.right, val);
 }
 

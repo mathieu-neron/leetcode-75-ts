@@ -6,7 +6,7 @@ describe("keys-and-rooms", () => {
     { args: [[[1], [2], [3], []]] as const, want: true },
     { args: [[[1, 3], [3, 0, 1], [2], [0]]] as const, want: false },
   ];
-  it.skip.each(cases)("canVisitAllRooms(%j)", ({ args, want }) => {
+  it.each(cases)("canVisitAllRooms(%j)", ({ args, want }) => {
     expect(canVisitAllRooms(...args)).toEqual(want);
   });
 });

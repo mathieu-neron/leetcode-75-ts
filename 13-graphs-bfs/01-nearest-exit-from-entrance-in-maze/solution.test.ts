@@ -2,7 +2,7 @@
 import { nearestExit } from "./solution";
 
 describe("nearest-exit-from-entrance-in-maze", () => {
-  it.skip("TODO: implement nearestExit", () => {
+  it("TODO: implement nearestExit", () => {
     expect(true).toBe(true);
   });
 });

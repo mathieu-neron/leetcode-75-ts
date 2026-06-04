@@ -27,7 +27,7 @@ describe("binary-tree-right-side-view", () => {
     { tree: [1, null, 3], want: [1, 3] },
     { tree: [], want: [] },
   ];
-  it.skip.each(cases)("rightSideView(%j)", ({ tree, want }) => {
+  it.each(cases)("rightSideView(%j)", ({ tree, want }) => {
     expect(rightSideView(buildTree(tree))).toEqual(want);
   });
 });
