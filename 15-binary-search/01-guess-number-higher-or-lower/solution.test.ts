@@ -2,7 +2,7 @@
 import { guessNumber } from "./solution";
 
 describe("guess-number-higher-or-lower", () => {
-  it.skip("TODO: implement guessNumber", () => {
+  it("TODO: implement guessNumber", () => {
     expect(true).toBe(true);
   });
 });
