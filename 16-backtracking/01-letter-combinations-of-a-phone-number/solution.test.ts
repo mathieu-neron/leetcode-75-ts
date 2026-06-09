@@ -7,7 +7,7 @@ describe("letter-combinations-of-a-phone-number", () => {
     { args: [""] as const, want: [] },
     { args: ["2"] as const, want: ["a", "b", "c"] },
   ];
-  it.skip.each(cases)("letterCombinations(%j)", ({ args, want }) => {
+  it.each(cases)("letterCombinations(%j)", ({ args, want }) => {
     expect([...letterCombinations(...args)].sort()).toEqual([...want].sort());
   });
 });
