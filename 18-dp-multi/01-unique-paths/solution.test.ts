@@ -6,7 +6,7 @@ describe("unique-paths", () => {
     { args: [3, 7] as const, want: 28 },
     { args: [3, 2] as const, want: 3 },
   ];
-  it.skip.each(cases)("uniquePaths(%j)", ({ args, want }) => {
+  it.each(cases)("uniquePaths(%j)", ({ args, want }) => {
     expect(uniquePaths(...args)).toEqual(want);
   });
 });

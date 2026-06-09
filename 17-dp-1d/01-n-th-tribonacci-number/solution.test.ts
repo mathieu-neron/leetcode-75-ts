@@ -6,7 +6,7 @@ describe("n-th-tribonacci-number", () => {
     { args: [4] as const, want: 4 },
     { args: [25] as const, want: 1389537 },
   ];
-  it.skip.each(cases)("tribonacci(%j)", ({ args, want }) => {
+  it.each(cases)("tribonacci(%j)", ({ args, want }) => {
     expect(tribonacci(...args)).toEqual(want);
   });
 });
