@@ -7,7 +7,7 @@ describe("non-overlapping-intervals", () => {
     { args: [[[1, 2], [1, 2], [1, 2]]] as const, want: 2 },
     { args: [[[1, 2], [2, 3]]] as const, want: 0 },
   ];
-  it.skip.each(cases)("eraseOverlapIntervals(%j)", ({ args, want }) => {
+  it.each(cases)("eraseOverlapIntervals(%j)", ({ args, want }) => {
     expect(eraseOverlapIntervals(...args)).toEqual(want);
   });
 });

@@ -6,7 +6,7 @@ describe("counting-bits", () => {
     { args: [2] as const, want: [0, 1, 1] },
     { args: [5] as const, want: [0, 1, 1, 2, 1, 2] },
   ];
-  it.skip.each(cases)("countBits(%j)", ({ args, want }) => {
+  it.each(cases)("countBits(%j)", ({ args, want }) => {
     expect(countBits(...args)).toEqual(want);
   });
 });

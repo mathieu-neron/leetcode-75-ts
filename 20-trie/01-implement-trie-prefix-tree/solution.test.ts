@@ -2,7 +2,7 @@
 import { Trie } from "./solution";
 
 describe("implement-trie-prefix-tree", () => {
-  it.skip("TODO: implement Trie", () => {
+  it("TODO: implement Trie", () => {
     const instance = new Trie();
     expect(instance).toBeDefined();
   });
