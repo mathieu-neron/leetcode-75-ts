@@ -7,7 +7,7 @@ describe("determine-if-two-strings-are-close", () => {
     { args: ["a", "aa"] as const, want: false },
     { args: ["cabbba", "abbccc"] as const, want: true },
   ];
-  it.skip.each(cases)("closeStrings(%j)", ({ args, want }) => {
+  it.each(cases)("closeStrings(%j)", ({ args, want }) => {
     expect(closeStrings(...args)).toEqual(want);
   });
 });

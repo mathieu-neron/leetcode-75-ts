@@ -7,7 +7,7 @@ describe("asteroid-collision", () => {
     { args: [[8, -8]] as const, want: [] },
     { args: [[10, 2, -5]] as const, want: [10] },
   ];
-  it.skip.each(cases)("asteroidCollision(%j)", ({ args, want }) => {
+  it.each(cases)("asteroidCollision(%j)", ({ args, want }) => {
     expect(asteroidCollision(...args)).toEqual(want);
   });
 });
