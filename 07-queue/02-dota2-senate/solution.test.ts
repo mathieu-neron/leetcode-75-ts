@@ -6,7 +6,7 @@ describe("dota2-senate", () => {
     { args: ["RD"] as const, want: "Radiant" },
     { args: ["RDD"] as const, want: "Dire" },
   ];
-  it.skip.each(cases)("predictPartyVictory(%j)", ({ args, want }) => {
+  it.each(cases)("predictPartyVictory(%j)", ({ args, want }) => {
     expect(predictPartyVictory(...args)).toEqual(want);
   });
 });

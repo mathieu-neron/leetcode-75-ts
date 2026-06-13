@@ -12,7 +12,24 @@ export class TreeNode {
   }
 }
 export function leafSimilar(root1: TreeNode | null, root2: TreeNode | null): boolean {
-  // TODO
-  return false;
+  const leaves1: number[] = [];
+  const leaves2: number[] = [];
+
+  function dfs(node: TreeNode | null, leafs: number[]) {
+    if (!node) return;
+    if (!node.left && !node.right) {
+      leafs.push(node.val);
+      return;
+    }
+
+    dfs(node.left, leafs);
+    dfs(node.right, leafs);
+  }
+
+  dfs(root1, leaves1);
+  dfs(root2, leaves2);
+
+  if (leaves1.length !== leaves2.length) return false;
+  return leaves1.every((val, index) => val === leaves2[index]);
 }
 
