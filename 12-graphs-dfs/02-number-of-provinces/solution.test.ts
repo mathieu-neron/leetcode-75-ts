@@ -6,7 +6,7 @@ describe("number-of-provinces", () => {
     { args: [[[1, 1, 0], [1, 1, 0], [0, 0, 1]]] as const, want: 2 },
     { args: [[[1, 0, 0], [0, 1, 0], [0, 0, 1]]] as const, want: 3 },
   ];
-  it.skip.each(cases)("findCircleNum(%j)", ({ args, want }) => {
+  it.each(cases)("findCircleNum(%j)", ({ args, want }) => {
     expect(findCircleNum(...args)).toEqual(want);
   });
 });

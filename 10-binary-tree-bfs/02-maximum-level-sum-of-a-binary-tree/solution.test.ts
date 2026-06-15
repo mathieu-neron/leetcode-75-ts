@@ -26,7 +26,7 @@ describe("maximum-level-sum-of-a-binary-tree", () => {
     { tree: [1, 7, 0, 7, -8, null, null], want: 2 },
     { tree: [989, null, 10250, 98693, -89388, null, null, null, -32127], want: 2 },
   ];
-  it.skip.each(cases)("maxLevelSum(%j)", ({ tree, want }) => {
+  it.each(cases)("maxLevelSum(%j)", ({ tree, want }) => {
     expect(maxLevelSum(buildTree(tree))).toEqual(want);
   });
 });
